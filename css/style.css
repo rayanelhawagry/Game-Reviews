@@ -16,7 +16,7 @@
 body {
     font-family: "Inter", system-ui, sans-serif;
     background-color: #0f0e17;
-    height: 1000px;
+    /* height: 1000px; */
 }
 
 img {
@@ -107,7 +107,7 @@ nav {
 
 /* ======== Games Cards ======== */
 .games-cards {
-    margin-top: 50px;
+    margin: 50px 0px;
     color: white;
     /* background-color: brown; */
 }
@@ -129,6 +129,22 @@ nav {
     border-radius: 15px;
     background-color: transparent;
     cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+        border: 2px solid darkorange;
+    }
+
+    &:hover .main figcaption .title span {
+        background-color: darkorange;
+    }
+
+    /* &:hover  {
+    } */
+}
+
+.games-cards .container .outer-card .inner-card:hover footer {
+    border-top: 2px solid darkorange;
 }
 
 .outer-card .inner-card .main {
@@ -150,6 +166,7 @@ nav {
     padding: 5px;
     border-radius: 7px;
     background-color: rgba(255, 140, 0, 0.2);
+    transition: all 0.2s;
 }
 
 .main figcaption p {
@@ -163,6 +180,7 @@ nav {
     border-top: 2px solid rgba(255, 140, 0, 0.2);
     display: flex;
     justify-content: space-between;
+    transition: all 0.2s;
 }
 
 
