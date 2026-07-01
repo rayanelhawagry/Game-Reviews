@@ -8,9 +8,15 @@
     border: 0px solid transparent;
 }
 
+*::selection {
+    color: #0f0e17;
+    background-color: darkorange;
+}
+
 body {
     font-family: "Inter", system-ui, sans-serif;
-    background-color: black;
+    background-color: #0f0e17;
+    height: 1000px;
 }
 
 img {
@@ -29,20 +35,20 @@ a {
 }
 
 .container {
-    width: 85%;
+    width: 90%;
     margin-inline: auto;
 }
 
 /* ======== Navbar ======== */
 nav {
     padding: 15px;
-    color: black;
-    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    /* background: rgba(255, 255, 255, 0.15); */
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08), inset 0 1px 0px rgba(255, 255, 255, 0.2);
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
@@ -89,7 +95,7 @@ nav {
 }
 
 .nav-inner .nav-links ul li a {
-    color: black;
+    color: white;
     font-size: 1.15rem;
     font-weight: 500;
     transition: all 0.2s;
@@ -97,4 +103,71 @@ nav {
     &:hover {
         color: darkorange;
     }
+}
+
+/* ======== Games Cards ======== */
+.games-cards {
+    margin-top: 50px;
+    color: white;
+    /* background-color: brown; */
+}
+
+.games-cards .container {
+    /* background-color: chartreuse; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.games-cards .container .outer-card {
+    /* background-color: cadetblue; */
+    width: 25%;
+    padding: 10px;
+}
+
+.games-cards .container .outer-card .inner-card {
+    border: 2px solid rgba(255, 140, 0, 0.2);
+    border-radius: 15px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.outer-card .inner-card .main {
+    padding: 10px;
+
+}
+
+.main figure img {
+    border-radius: 10px;
+}
+
+.main figcaption .title {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main figcaption .title span {
+    padding: 5px;
+    border-radius: 7px;
+    background-color: rgba(255, 140, 0, 0.2);
+}
+
+.main figcaption p {
+    text-align: center;
+    overflow-wrap: break-word;
+    /* color: gray; */
+}
+
+.outer-card .inner-card footer {
+    padding: 10px;
+    border-top: 2px solid rgba(255, 140, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.outer-card .inner-card footer span {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #32383E;
 }
