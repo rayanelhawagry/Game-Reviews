@@ -14,9 +14,8 @@
 }
 
 body {
-    font-family: "Inter", system-ui, sans-serif;
     background-color: #0f0e17;
-    /* height: 1000px; */
+    font-family: "Inter", system-ui, sans-serif;
 }
 
 img {
@@ -44,10 +43,10 @@ nav {
     padding: 15px;
     color: white;
     /* background: rgba(255, 255, 255, 0.15); */
-    backdrop-filter: blur(50px);
-    -webkit-backdrop-filter: blur(12px);
-    /* border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08), inset 0 1px 0px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08), inset 0 1px 0px rgba(255, 255, 255, 0.2); */
     position: sticky;
     top: 0;
     left: 0;
@@ -55,7 +54,7 @@ nav {
     z-index: 9999;
 }
 
-.nav-inner {
+nav .nav-inner {
     width: 90%;
     margin-inline: auto;
     display: flex;
@@ -109,17 +108,14 @@ nav {
 .games-cards {
     margin: 50px 0px;
     color: white;
-    /* background-color: brown; */
 }
 
 .games-cards .container {
-    /* background-color: chartreuse; */
     display: flex;
     flex-wrap: wrap;
 }
 
 .games-cards .container .outer-card {
-    /* background-color: cadetblue; */
     width: 25%;
     padding: 10px;
 }
@@ -127,13 +123,12 @@ nav {
 .games-cards .container .outer-card .inner-card {
     border: 2px solid rgba(255, 140, 0, 0.2);
     border-radius: 15px;
-    background-color: transparent;
     cursor: pointer;
     transition: all 0.2s;
 
     &:hover {
         border: 2px solid darkorange;
-        transform: scale(1.03);
+        transform: scale(1.02);
     }
 
     &:hover .main figcaption .title span {
@@ -147,7 +142,6 @@ nav {
 
 .outer-card .inner-card .main {
     padding: 10px;
-
 }
 
 .main figure img {
@@ -162,15 +156,15 @@ nav {
 
 .main figcaption .title span {
     padding: 5px;
-    border-radius: 7px;
     background-color: rgba(255, 140, 0, 0.2);
+    border-radius: 7px;
     transition: all 0.2s;
 }
 
 .main figcaption p {
+    color: #a5a5a5;
     text-align: center;
     overflow-wrap: break-word;
-    /* color: gray; */
 }
 
 .outer-card .inner-card footer {
@@ -180,7 +174,6 @@ nav {
     justify-content: space-between;
     transition: all 0.2s;
 }
-
 
 .outer-card .inner-card footer span {
     padding: 5px;
