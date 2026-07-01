@@ -10,6 +10,7 @@
 
 body {
     font-family: "Inter", system-ui, sans-serif;
+    background-color: black;
 }
 
 img {
@@ -37,7 +38,7 @@ nav {
     padding: 15px;
     color: black;
     background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08), inset 0 1px 0px rgba(255, 255, 255, 0.2);
@@ -49,25 +50,33 @@ nav {
 }
 
 .nav-inner {
+    width: 90%;
+    margin-inline: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .nav-inner .logo-header {
-    width: 15%;
+    width: 18%;
     font-size: 1.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-inner .logo-header .logo img {
+    width: 2.5rem;
+    cursor: pointer;
 }
 
 .nav-inner .logo-header h5 {
     cursor: pointer;
-}
+    transition: all 0.2s;
 
-.nav-inner .logo-header h5 img {
-    max-width: 40px;
-    display: inline;
-    vertical-align: middle;
-    cursor: pointer;
+    &:hover {
+        color: darkorange;
+    }
 }
 
 .nav-inner .nav-links {
@@ -76,11 +85,16 @@ nav {
 
 .nav-inner .nav-links ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .nav-inner .nav-links ul li a {
     color: black;
     font-size: 1.15rem;
     font-weight: 500;
+    transition: all 0.2s;
+
+    &:hover {
+        color: darkorange;
+    }
 }
