@@ -238,3 +238,116 @@ nav .nav-inner {
     border-radius: 5px;
     background-color: #32383E;
 }
+
+/* ======== Game Details ======== */
+.game-details {
+    /* background-color: teal; */
+    margin: 20px 0px;
+    color: white;
+}
+
+.game-details .container {
+    /* background-color: chartreuse; */
+    width: 85%;
+}
+
+.game-details .container header {
+    /* background-color: darkred; */
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-details .container header .close-btn {
+    width: 3.125rem;
+    height: 3.125rem;
+    cursor: pointer;
+}
+
+.game-details .container .details-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details-content .outer {
+    /* background-color: teal; */
+    padding: 10px;
+}
+
+.details-content .inner {
+    /* background-color: red; */
+}
+
+.details-content .cover {
+    width: 30%;
+}
+
+.details-content .details {
+    width: 70%;
+}
+
+.details-content .cover .inner img {
+    border: 2px solid rgba(255, 140, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+        border: 2px solid darkorange;
+    }
+}
+
+.details-content .details .inner h3 {
+    font-size: 1.75rem;
+    /* margin-bottom: 5px; */
+}
+
+.details .inner p {
+    margin: 15px 0px;
+}
+
+.details .inner .specs {
+    font-weight: 600;
+}
+
+.details .inner .specs span {
+    padding: 5px;
+    background-color: darkorange;
+    color: black;
+    border-radius: 7px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.details .inner .specs span::selection {
+    color: darkorange;
+    background-color: black;
+}
+
+.details .inner .desc {
+    line-height: 1.6;
+    font-size: 0.875rem;
+}
+
+.details .inner button {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid darkorange;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.2s;
+
+    &:hover {
+        background-color: darkorange;
+    }
+
+    &:hover a {
+        color: black;
+    }
+}
+
+.details .inner button a {
+    color: white;
+}
