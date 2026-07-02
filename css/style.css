@@ -263,6 +263,7 @@ nav .nav-inner {
     width: 3.125rem;
     height: 3.125rem;
     cursor: pointer;
+    background-color: transparent;
 }
 
 .game-details .container .details-content {
@@ -288,6 +289,7 @@ nav .nav-inner {
 }
 
 .details-content .cover .inner img {
+    box-shadow: -5px 10px 150px 10px rgba(255, 140, 0, 0.1);
     border: 2px solid rgba(255, 140, 0, 0.2);
     cursor: pointer;
     transition: all 0.2s;
@@ -313,15 +315,15 @@ nav .nav-inner {
 .details .inner .specs span {
     padding: 5px;
     background-color: darkorange;
-    color: black;
+    color: #0f0e17;
     border-radius: 7px;
     font-size: 0.75rem;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .details .inner .specs span::selection {
     color: darkorange;
-    background-color: black;
+    background-color: #0f0e17;
 }
 
 .details .inner .desc {
@@ -344,7 +346,7 @@ nav .nav-inner {
     }
 
     &:hover a {
-        color: black;
+        color: #0f0e17;
     }
 }
 

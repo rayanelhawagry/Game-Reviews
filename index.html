@@ -21,7 +21,7 @@
     </div>
 
     <!-------- Navbar -------->
-    <!-- <nav>
+    <nav class="navbar d-none">
         <div class="nav-inner">
             <div class="logo-header">
                 <div class="logo">
@@ -40,10 +40,10 @@
                 </ul>
             </div>
         </div>
-    </nav> -->
+    </nav>
 
     <!-------- Games Cards -------->
-    <!-- <div class="games-cards">
+    <div class="games-cards d-none">
         <div class="container">
 
             <div class="outer-card">
@@ -286,17 +286,18 @@
                     </footer>
                 </div>
             </div>
+
         </div>
-    </div> -->
+    </div>
 
     <!-------- Game Details -------->
-    <div class="game-details">
+    <div class="game-details d-none">
         <div class="container">
             <header>
                 <h1>Game Details</h1>
-                <div class="close-btn">
+                <button class="close-btn">
                     <img src="./images/close-window.png" alt="Close Button" />
-                </div>
+                </button>
             </header>
 
             <div class="details-content">
@@ -329,7 +330,7 @@
                             other features, Lost Ark offers crafting, guilds, and other systems players expect from
                             online games. Whatever you want to do, it’s up to you.
                         </p>
-                        <button>
+                        <button class="show-btn">
                             <a href="#" target="_blank">Show Game</a>
                         </button>
                     </div>
