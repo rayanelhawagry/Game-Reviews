@@ -52,7 +52,6 @@ a {
     position: fixed;
     inset: 0;
     z-index: 9999999999;
-    /* display: flex; */
     justify-content: center;
     align-items: center;
 }
@@ -100,11 +99,10 @@ a {
 nav {
     padding: 15px;
     color: white;
-    /* background: rgba(255, 255, 255, 0.15); */
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08), inset 0 1px 0px rgba(255, 255, 255, 0.2); */
+    box-shadow: -5px 10px 200px 10px rgba(255, 140, 0, 0.1);
     position: sticky;
     top: 0;
     left: 0;
@@ -112,15 +110,13 @@ nav {
     z-index: 9999;
 }
 
-nav .nav-inner {
-    width: 90%;
-    margin-inline: auto;
+nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.nav-inner .logo-header {
+.container .logo-header {
     width: 18%;
     font-size: 1.5rem;
     display: flex;
@@ -128,12 +124,11 @@ nav .nav-inner {
     align-items: center;
 }
 
-.nav-inner .logo-header .logo img {
+.container .logo-header .logo img {
     width: 2.5rem;
-    cursor: pointer;
 }
 
-.nav-inner .logo-header h5 {
+.container .logo-header h5 {
     cursor: pointer;
     transition: all 0.2s;
 
@@ -142,16 +137,16 @@ nav .nav-inner {
     }
 }
 
-.nav-inner .nav-links {
+.container .nav-links {
     width: 60%;
 }
 
-.nav-inner .nav-links ul {
+.container .nav-links ul {
     display: flex;
     justify-content: space-around;
 }
 
-.nav-inner .nav-links ul li a {
+.container .nav-links ul li a {
     color: white;
     font-size: 1.15rem;
     font-weight: 500;
@@ -235,24 +230,17 @@ nav .nav-inner {
 
 .outer-card .inner-card footer span {
     padding: 5px;
-    border-radius: 5px;
     background-color: #32383E;
+    border-radius: 7px;
 }
 
 /* ======== Game Details ======== */
 .game-details {
-    /* background-color: teal; */
     margin: 20px 0px;
     color: white;
 }
 
-.game-details .container {
-    /* background-color: chartreuse; */
-    width: 85%;
-}
-
 .game-details .container header {
-    /* background-color: darkred; */
     margin-bottom: 15px;
     display: flex;
     justify-content: space-between;
@@ -271,27 +259,18 @@ nav .nav-inner {
     justify-content: space-between;
 }
 
-.details-content .outer {
-    /* background-color: teal; */
-    padding: 10px;
-}
-
-/* .details-content .inner {
-    background-color: red;
-} */
-
 .details-content .cover {
     width: 30%;
 }
 
 .details-content .details {
-    width: 70%;
+    width: 68%;
 }
 
 .details-content .cover .inner img {
-    box-shadow: -5px 10px 150px 10px rgba(255, 140, 0, 0.1);
     border: 2px solid rgba(255, 140, 0, 0.2);
     cursor: pointer;
+    box-shadow: -5px 10px 150px 10px rgba(255, 140, 0, 0.1);
     transition: all 0.2s;
 
     &:hover {
@@ -301,7 +280,6 @@ nav .nav-inner {
 
 .details-content .details .inner h3 {
     font-size: 1.75rem;
-    /* margin-bottom: 5px; */
 }
 
 .details .inner p {
@@ -314,8 +292,8 @@ nav .nav-inner {
 
 .details .inner .specs span {
     padding: 5px;
-    background-color: darkorange;
     color: #0f0e17;
+    background-color: darkorange;
     border-radius: 7px;
     font-size: 0.75rem;
     font-weight: 700;
@@ -333,23 +311,17 @@ nav .nav-inner {
 
 .details .inner button {
     padding: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    border: 2px solid darkorange;
+    color: white;
     background-color: transparent;
+    border: 2px solid darkorange;
+    border-radius: 10px;
     cursor: pointer;
-    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
     transition: all 0.2s;
 
     &:hover {
+        color: #0f0e17;
         background-color: darkorange;
     }
-
-    &:hover a {
-        color: #0f0e17;
-    }
-}
-
-.details .inner button a {
-    color: white;
 }
