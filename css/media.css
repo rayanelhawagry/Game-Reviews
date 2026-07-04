@@ -46,3 +46,62 @@
 @media all and (orientation: landscape) {
     
 }
+
+
+/* ======== Responsive Style ======== */
+@media (max-width: 480px) {
+    .navbar .container {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 880px) {
+    .navbar {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+
+    .container .navbar-menu ul {
+        display: none;
+        width: 40%;
+        height: 100dvh;
+        padding: 5rem 1.5rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.7rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+    }
+
+    /* .container .navbar-menu ul.d-none {
+        display: none;
+    } */
+
+    .container .navbar-menu ul.active {
+        display: flex;
+    }
+
+    .container .navbar-toggle {
+        display: block;
+        z-index: 99999999999;
+        position: absolute;
+        top: 20%;
+        right: 10%;
+    }
+
+    .container .navbar-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .container .navbar-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .container .navbar-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
