@@ -115,7 +115,8 @@ a {
 }
 
 .navbar .container {
-    max-width: 1600px;
+    /* edit max-width later... */
+    max-width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -125,8 +126,9 @@ a {
     width: 18%;
     font-size: 1.5rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
+    gap: 0.625rem;
 }
 
 .container .logo-header .logo img {

@@ -1,86 +1,26 @@
-/* XS ==> Extra Small Devices (Smart Watches & Small Phones) */
-@media all and (width < 640px) {
-    /* .container .logo-header {
-        width: 70%;
-    } */
-}
-
-
-/* SM ==> Small Devices (Smartphones) */
-@media all and (640px <=width < 768px) {}
-
-
-/* MD ==> Medium Devices (Tablets & Small Laptops) */
-@media all and (768px <=width < 1024px) {}
-
-
-/* LG ==> Large Devices (Standard Laptops & Landscape Tablets) */
-@media all and (1024px <=width < 1280px) {}
-
-
-/* XL ==> Extra Large Devices (Large Laptops & Desktops) */
-@media all and (1280px <=width < 1536px) {}
-
-
-/* XXL ==> Extra Extra Large Devices (Large Screens, Smart TVs & Ultra-wide) */
-@media all and (1536px <=width) {}
-
-
-/* Orientation "Portrait Mode" ==> The Height is Greater Than or Equal to The Width
-(Mobile Phones When Held Upright) */
-@media all and (orientation: portrait) {}
-
-
-/* Orientation "Landscape Mode" ==> The Width is Greater Than The Height
-(Tablets, Laptops, or Phones Rotated Sideways) */
-@media all and (orientation: landscape) {}
-
-
 /* ======== Responsive Style ======== */
-@media (max-width: 480px) {
-    .navbar .container {
-        padding: 0 1rem;
-    }
-}
 
-@media (max-width: 880px) {
-    .navbar {
+/* XS ==> Extra Small Devices (Smart Watches & Small Phones) */
+/* SM ==> Small Devices (Smartphones) */
+@media all and (width < 768px) {
+
+    /* ===== Navbar ===== */
+    .navbar.active {
         backdrop-filter: none;
         -webkit-backdrop-filter: none;
     }
 
-    .container .navbar-menu ul {
-        display: none;
-        width: 40%;
-        height: 100dvh;
-        padding: 5rem 1.5rem;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.7rem;
-        position: absolute;
-        top: 0;
-        right: 0;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(30px);
-        -webkit-backdrop-filter: blur(30px);
-        /* border-left: 1px solid rgba(255, 255, 255, 0.2); */
+    .container .logo-header {
+        width: 50%;
     }
-
-    /* .container .navbar-menu ul.d-none {
-        display: none;
-    } */
-
-    .container .navbar-menu ul.active {
-        display: flex;
-    }
-
 
     .container .navbar-toggle {
         display: block;
-        z-index: 99999999999;
+        width: 20%;
         position: absolute;
         top: 20%;
-        right: 10%;
+        right: 5%;
+        z-index: 99999999999;
     }
 
     .container .navbar-toggle.active .bar:nth-child(2) {
@@ -93,5 +33,62 @@
 
     .container .navbar-toggle.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .container .navbar-menu {
+        width: 30%;
+    }
+
+    .container .navbar-menu ul.active {
+        display: flex;
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+    }
+
+    .container .navbar-menu ul {
+        display: none;
+        height: 100dvh;
+        padding: 5rem 1.5rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.7rem;
+        position: absolute;
+        inset: 0;
+    }
+}
+
+
+/* MD ==> Medium Devices (Tablets & Small Laptops) */
+@media all and (768px <=width < 1024px) {
+
+    /* ===== Navbar ===== */
+    .container .logo-header {
+        width: 30%;
+    }
+
+    .container .navbar-menu {
+        width: 65%;
+    }
+
+    .container .navbar-menu ul {
+        gap: 0.7rem;
+    }
+
+    .container .navbar-menu ul li a {
+        font-size: 1rem;
+    }
+}
+
+
+/* LG ==> Large Devices (Standard Laptops & Landscape Tablets) */
+@media all and (1024px <=width < 1280px) {
+
+    /* ===== Navbar ===== */
+    .container .logo-header {
+        width: 30%;
+    }
+
+    .container .navbar-menu ul {
+        gap: 0.7rem;
     }
 }
