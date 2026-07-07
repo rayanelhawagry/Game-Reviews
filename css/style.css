@@ -109,7 +109,7 @@ a {
     left: 0;
     right: 0;
     z-index: 9999;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
 }
@@ -288,11 +288,17 @@ a {
     height: 3.125rem;
     cursor: pointer;
     background-color: transparent;
+    transition: all 0.2s;
+
+    &:hover {
+        box-shadow: -5px 10px 150px 10px rgba(255, 140, 0, 0.1);
+    }
 }
 
 .game-details .container .details-content {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .details-content .cover {
@@ -306,11 +312,11 @@ a {
 .details-content .cover .inner img {
     border: 2px solid rgba(255, 140, 0, 0.2);
     cursor: pointer;
-    box-shadow: -5px 10px 150px 10px rgba(255, 140, 0, 0.1);
     transition: all 0.2s;
 
     &:hover {
         border: 2px solid darkorange;
+        box-shadow: -5px 10px 150px 10px rgba(255, 140, 0, 0.1);
     }
 }
 
@@ -359,5 +365,6 @@ a {
     &:hover {
         color: #0f0e17;
         background-color: darkorange;
+        box-shadow: -5px 10px 150px 10px rgba(255, 140, 0, 0.1);
     }
 }

@@ -60,6 +60,13 @@
     .games-cards .container .outer-card {
         width: 100%;
     }
+
+    /* ===== Game Details ===== */
+    .details-content .cover,
+    .details-content .details {
+        width: 100%;
+        padding: 10px 0px;
+    }
 }
 
 
