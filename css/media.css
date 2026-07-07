@@ -55,6 +55,11 @@
         position: absolute;
         inset: 0;
     }
+
+    /* ===== Games Cards ===== */
+    .games-cards .container .outer-card {
+        width: 100%;
+    }
 }
 
 
@@ -77,6 +82,11 @@
     .container .navbar-menu ul li a {
         font-size: 1rem;
     }
+
+    /* ===== Games Cards ===== */
+    .games-cards .container .outer-card {
+        width: 50%;
+    }
 }
 
 
@@ -90,5 +100,10 @@
 
     .container .navbar-menu ul {
         gap: 0.7rem;
+    }
+
+    /* ===== Games Cards ===== */
+    .games-cards .container .outer-card {
+        width: 33.333333%;
     }
 }
