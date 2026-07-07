@@ -29,7 +29,7 @@ ul {
 }
 
 a {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -109,14 +109,11 @@ a {
     left: 0;
     right: 0;
     z-index: 9999;
-    /* display: flex; */
     justify-content: center;
     align-items: center;
 }
 
 .navbar .container {
-    /* edit max-width later... */
-    max-width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -178,7 +175,6 @@ a {
 }
 
 .container .navbar-menu ul li a {
-    color: white;
     font-size: 1.15rem;
     font-weight: 500;
     white-space: nowrap;
@@ -223,10 +219,10 @@ a {
     &:hover .main figcaption .title span {
         background-color: darkorange;
     }
-}
 
-.games-cards .container .outer-card .inner-card:hover footer {
-    border-top: 2px solid darkorange;
+    &:hover footer {
+        border-top: 2px solid darkorange;
+    }
 }
 
 .outer-card .inner-card .main {
