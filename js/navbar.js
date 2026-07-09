@@ -1,4 +1,6 @@
 "use strict";
+
+
 // Navbar UI.
 export default function navbarUI() {
     const navbar = document.querySelector('.navbar');
