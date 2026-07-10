@@ -1,5 +1,5 @@
 "use strict";
-import { categoryTitle, gamesList, getCategoryTitle } from "./main.js";
+import * as main from "./main.js";
 
 
 // Game card.
@@ -16,6 +16,9 @@ class GameCard {
 
 // Get games data.
 export async function getGamesData() {
+    main.loaderOverlay.classList.remove('d-none');
+    main.loaderOverlay.classList.add('d-flex');
+
     const options = {
         method: 'GET',
         headers: {
@@ -26,9 +29,11 @@ export async function getGamesData() {
     };
 
     try {
-        const response = await fetch(`https://free-to-play-games-database.p.rapidapi.com/api/games?category=${categoryTitle}`, options);
+        const response = await fetch(`https://free-to-play-games-database.p.rapidapi.com/api/games?category=${main.categoryTitle}`, options);
         const data = await response.json();
         console.log(data);
+        main.loaderOverlay.classList.remove('d-flex');
+        main.loaderOverlay.classList.add('d-none');
     } catch (error) {
         console.log("Error: ", error);
     };
