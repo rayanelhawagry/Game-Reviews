@@ -4,7 +4,8 @@ import { getGamesData } from "./games.js";
 
 
 const navLinks = document.querySelectorAll('.nav-link');
-export let categoryTitle = 'mmorpg';
+export let categoryTitle = "mmorpg";
+export let gamesList = [];
 
 
 getGamesData();
