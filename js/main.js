@@ -1,15 +1,15 @@
 "use strict";
 import navbarUI from "./navbar.js";
-import { getGamesData } from "./games.js";
+import * as games from "./games.js";
 
 
 const navLinks = document.querySelectorAll('.nav-link');
 export const loaderOverlay = document.querySelector('.loader-overlay');
 export let categoryTitle = "mmorpg";
-export let gamesList = [];
 
 
-getGamesData();
+// Get games data.
+games.getGamesData();
 
 // Get category title.
 export function getCategoryTitle() {
@@ -19,7 +19,7 @@ export function getCategoryTitle() {
             console.log(categoryTitle);
 
             // Get games data.
-            getGamesData();
+            games.getGamesData();
         });
     });
 };

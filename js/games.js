@@ -2,6 +2,10 @@
 import * as main from "./main.js";
 
 
+let data;
+let gamesList = [];
+
+
 // Game card.
 class GameCard {
     constructor(title, thumbnail, short_description, genre, platform) {
@@ -30,11 +34,31 @@ export async function getGamesData() {
 
     try {
         const response = await fetch(`https://free-to-play-games-database.p.rapidapi.com/api/games?category=${main.categoryTitle}`, options);
-        const data = await response.json();
-        console.log(data);
+        data = await response.json();
+        gamesList = [];
+        addGamesData();
+
         main.loaderOverlay.classList.remove('d-flex');
         main.loaderOverlay.classList.add('d-none');
     } catch (error) {
         console.log("Error: ", error);
     };
+};
+
+
+// Add games data.
+export function addGamesData() {
+    for (let i = 0; i < data.length; i++) {
+        const game = new GameCard(
+            data[i].title,
+            data[i].thumbnail,
+            data[i].short_description,
+            data[i].genre,
+            data[i].platform,
+        );
+
+        gamesList.push(game);
+    };
+
+    console.log(gamesList);
 };
