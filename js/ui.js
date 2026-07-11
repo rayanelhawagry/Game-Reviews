@@ -20,7 +20,9 @@ export function displayGamesData() {
                             <h3>${gamesList[i].title}</h3>
                             <span>Free</span>
                         </div>
-                        <p>${gamesList[i].short_description}</p>
+                        <div class="desc">
+                            <p>${gamesList[i].short_description}</p>
+                        </div>
                     </figcaption>
                 </div>
                 <footer>

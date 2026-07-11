@@ -43,6 +43,7 @@ export async function getGamesData() {
         main.loaderOverlay.classList.remove('d-flex');
         main.loaderOverlay.classList.add('d-none');
     } catch (error) {
+        // add alert here...
         console.log("Error: ", error);
     };
 };

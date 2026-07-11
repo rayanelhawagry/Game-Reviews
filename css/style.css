@@ -199,6 +199,7 @@ a {
 .games-cards .container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .games-cards .container .outer-card {
@@ -207,6 +208,7 @@ a {
 }
 
 .games-cards .container .outer-card .inner-card {
+    height: 100%;
     border: 2px solid rgba(255, 140, 0, 0.2);
     border-radius: 15px;
     cursor: pointer;
@@ -227,7 +229,8 @@ a {
 }
 
 .outer-card .inner-card .main {
-    padding: 10px;
+    height: 88%;
+    padding: 15px;
 }
 
 .main figure img {
@@ -236,8 +239,10 @@ a {
 
 .main figcaption .title {
     margin-top: 10px;
+    margin-bottom: 3px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .main figcaption .title span {
@@ -247,7 +252,11 @@ a {
     transition: all 0.2s;
 }
 
-.main figcaption p {
+.main figcaption .desc {
+    padding: 10px 0px;
+}
+
+.main figcaption .desc p {
     color: #a5a5a5;
     text-align: center;
     overflow-wrap: break-word;
@@ -265,6 +274,7 @@ a {
     padding: 5px;
     background-color: #32383E;
     border-radius: 7px;
+    font-size: 0.625rem;
 }
 
 /* ======== Game Details ======== */
