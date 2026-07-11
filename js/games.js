@@ -8,7 +8,8 @@ let gamesList = [];
 
 // Game card.
 class GameCard {
-    constructor(title, thumbnail, short_description, genre, platform) {
+    constructor(id, title, thumbnail, short_description, genre, platform) {
+        this.id = id;
         this.title = title;
         this.thumbnail = thumbnail;
         this.short_description = short_description;
@@ -50,6 +51,7 @@ export async function getGamesData() {
 export function addGamesData() {
     for (let i = 0; i < data.length; i++) {
         const game = new GameCard(
+            data[i].id,
             data[i].title,
             data[i].thumbnail,
             data[i].short_description,
