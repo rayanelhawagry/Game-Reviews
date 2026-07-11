@@ -5,6 +5,7 @@ import * as games from "./games.js";
 
 const navLinks = document.querySelectorAll('.nav-link');
 export const loaderOverlay = document.querySelector('.loader-overlay');
+export const gamesCards = document.querySelector('#gamesCards');
 export let categoryTitle = "mmorpg";
 
 

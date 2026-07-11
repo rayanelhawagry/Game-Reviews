@@ -1,9 +1,10 @@
 "use strict";
 import * as main from "./main.js";
+import { displayGamesData } from "./ui.js";
 
 
 let data;
-let gamesList = [];
+export let gamesList = [];
 
 
 // Game card.
@@ -48,7 +49,7 @@ export async function getGamesData() {
 
 
 // Add games data.
-export function addGamesData() {
+function addGamesData() {
     for (let i = 0; i < data.length; i++) {
         const game = new GameCard(
             data[i].id,
@@ -63,4 +64,5 @@ export function addGamesData() {
     };
 
     console.log(gamesList);
+    displayGamesData();
 };
