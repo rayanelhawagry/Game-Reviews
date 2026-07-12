@@ -7,10 +7,11 @@ const navLinks = document.querySelectorAll('.nav-link');
 export const loaderOverlay = document.querySelector('.loader-overlay');
 export const gamesCards = document.querySelector('#gamesCards');
 export let categoryTitle = "mmorpg";
+const gamesClass = new games.Games();
 
 
 // Get games data.
-games.getGamesData();
+gamesClass.getGamesData();
 
 // Get category title.
 export function getCategoryTitle() {
@@ -20,7 +21,7 @@ export function getCategoryTitle() {
             console.log(categoryTitle);
 
             // Get games data.
-            games.getGamesData();
+            gamesClass.getGamesData();
         });
     });
 };
