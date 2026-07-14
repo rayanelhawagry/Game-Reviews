@@ -1,6 +1,7 @@
 "use strict";
 import * as games from "./games.js";
-import { gamesCards } from "./main.js";
+import * as main from "./main.js";
+import * as details from "./details.js";
 
 
 export let outerGameCards;
@@ -40,4 +41,42 @@ export function displayGamesData() {
     };
 
     outerGameCards = [...document.querySelectorAll('#outerGameCard')];
+};
+
+
+// Display game details.
+export function displayGameDetails() {
+    main.navbarDiv.classList.remove('d-flex');
+    main.navbarDiv.classList.add('d-none');
+    main.gamesCardsDiv.classList.add('d-none');
+    main.gameDetailsDiv.classList.remove('d-none');
+
+
+    main.gameDetails.innerHTML = `
+    <header>
+        <h1>${details.data.title}</h1>
+        <button class="close-btn">
+            <img src="./images/close-window.png" alt="Close Button" />
+        </button>
+    </header>
+
+    <div class="details-content">
+        <div class="cover">
+            <div class="inner">
+                <img src="${details.data.thumbnail}" alt="Game Cover" />
+            </div>
+        </div>
+        
+        <div class="details">
+            <div class="inner">
+                <h3>Title: ${details.data.title}</h3>
+                <p class="specs">Category: <span>${details.data.genre}</span></p>
+                <p class="specs">Platform: <span>${details.data.platform}</span></p>
+                <p class="specs">Status: <span>${details.data.status}</span></p>
+                <p class="desc">${details.data.description}</p>
+                <button class="show-btn">Show Game</button>
+            </div>
+        </div>
+    </div>
+    `;
 };

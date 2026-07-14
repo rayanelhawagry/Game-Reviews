@@ -47,7 +47,7 @@ export class Games {
             console.log(gamesList);
             // Display games data.
             displayGamesData();
-            detailsClass.getGameID();
+            details.getGameID();
 
             main.loaderOverlay.classList.remove('d-flex');
             main.loaderOverlay.classList.add('d-none');
