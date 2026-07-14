@@ -1,5 +1,6 @@
 "use strict";
 import * as main from "./main.js";
+import { getGameID } from "./details.js";
 import { displayGamesData } from "./ui.js";
 
 
@@ -45,11 +46,11 @@ export class Games {
             console.log(gamesList);
             // Display games data.
             displayGamesData();
+            getGameID();
 
             main.loaderOverlay.classList.remove('d-flex');
             main.loaderOverlay.classList.add('d-none');
         } catch (error) {
-            // add alert here...
             console.log("Error: ", error);
         };
     };

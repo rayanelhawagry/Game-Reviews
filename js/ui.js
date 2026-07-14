@@ -3,13 +3,16 @@ import * as games from "./games.js";
 import { gamesCards } from "./main.js";
 
 
+export let outerGameCards;
+
+
 // Display games data.
 export function displayGamesData() {
     let cartona = ``;
 
     for (let i = 0; i < games.gamesList.length; i++) {
         cartona += `
-        <div class="outer-card">
+        <div class="outer-card" id="outerGameCard">
             <div class="inner-card">
                 <div class="main">
                     <figure>
@@ -35,4 +38,6 @@ export function displayGamesData() {
 
         gamesCards.innerHTML = cartona;
     };
+
+    outerGameCards = [...document.querySelectorAll('#outerGameCard')];
 };
