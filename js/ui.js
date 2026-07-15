@@ -55,7 +55,7 @@ export function displayGameDetails() {
     main.gameDetails.innerHTML = `
     <header>
         <h1>${details.data.title}</h1>
-        <button class="close-btn">
+        <button class="close-btn" id="closeBtn">
             <img src="./images/close-window.png" alt="Close Button" />
         </button>
     </header>
@@ -79,4 +79,14 @@ export function displayGameDetails() {
         </div>
     </div>
     `;
+
+    // Close game details.
+    const closeBtn = document.querySelector('#closeBtn');
+    closeBtn.addEventListener("click", function () {
+        console.log("close");
+        main.navbarDiv.classList.remove('d-none');
+        main.navbarDiv.classList.add('d-flex');
+        main.gamesCardsDiv.classList.remove('d-none');
+        main.gameDetailsDiv.classList.add('d-none');
+    });
 };
