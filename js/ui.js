@@ -74,7 +74,7 @@ export function displayGameDetails() {
                 <p class="specs">Platform: <span>${details.data.platform}</span></p>
                 <p class="specs">Status: <span>${details.data.status}</span></p>
                 <p class="desc">${details.data.description}</p>
-                <button class="show-btn">Show Game</button>
+                <a href="${details.data.game_url}" target="_blank"><button class="show-btn">Show Game</button></a>
             </div>
         </div>
     </div>
