@@ -52,6 +52,7 @@ export function displayGameDetails() {
     main.gameDetailsDiv.classList.remove('d-none');
 
 
+    // should add "title" attribute to img tag with ${details.data.title}.
     main.gameDetails.innerHTML = `
     <header>
         <h1>${details.data.title}</h1>
@@ -81,6 +82,7 @@ export function displayGameDetails() {
     `;
 
     // Close game details.
+    // should change #closeBtn to .close-btn (& also delete id from button tag)
     const closeBtn = document.querySelector('#closeBtn');
     closeBtn.addEventListener("click", function () {
         console.log("close");

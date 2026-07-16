@@ -69,6 +69,14 @@
     }
 }
 
+@media all and (width < 450px) {
+
+    /* ===== Navbar ===== */
+    .container .logo-header {
+        width: 80%;
+    }
+}
+
 
 /* MD ==> Medium Devices (Tablets & Small Laptops) */
 @media all and (768px <=width < 1024px) {
