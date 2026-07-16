@@ -55,7 +55,7 @@ export function displayGameDetails() {
     main.gameDetails.innerHTML = `
     <header>
         <h1>${details.data.title}</h1>
-        <button class="close-btn" id="closeBtn">
+        <button class="close-btn">
             <img src="./images/close-window.png" alt="Close Button" />
         </button>
     </header>
@@ -81,8 +81,7 @@ export function displayGameDetails() {
     `;
 
     // Close game details.
-    // should change #closeBtn to .close-btn (& also delete id from button tag)
-    const closeBtn = document.querySelector('#closeBtn');
+    const closeBtn = document.querySelector('.close-btn');
     closeBtn.addEventListener("click", function () {
         console.log("close");
         main.navbarDiv.classList.remove('d-none');
