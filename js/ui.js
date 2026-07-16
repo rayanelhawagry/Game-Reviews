@@ -52,7 +52,6 @@ export function displayGameDetails() {
     main.gameDetailsDiv.classList.remove('d-none');
 
 
-    // should add "title" attribute to img tag with ${details.data.title}.
     main.gameDetails.innerHTML = `
     <header>
         <h1>${details.data.title}</h1>
@@ -64,7 +63,7 @@ export function displayGameDetails() {
     <div class="details-content">
         <div class="cover">
             <div class="inner">
-                <img src="${details.data.thumbnail}" alt="Game Cover" />
+                <img src="${details.data.thumbnail}" title="${details.data.title}" alt="Game Cover" />
             </div>
         </div>
         
