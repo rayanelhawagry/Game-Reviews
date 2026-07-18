@@ -1,7 +1,7 @@
 "use strict";
 import * as main from "./main.js";
+import * as ui from "./ui.js";
 import * as details from "./details.js";
-import { displayGamesData } from "./ui.js";
 
 
 let data;
@@ -44,9 +44,8 @@ export class Games {
                 gamesList.push(game);
             };
 
-            console.log(gamesList);
             // Display games data.
-            displayGamesData();
+            ui.displayGamesData();
             details.getGameID();
 
             main.loaderOverlay.classList.remove('d-flex');

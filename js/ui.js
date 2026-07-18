@@ -1,6 +1,6 @@
 "use strict";
-import * as games from "./games.js";
 import * as main from "./main.js";
+import * as games from "./games.js";
 import * as details from "./details.js";
 
 
@@ -13,7 +13,7 @@ export function displayGamesData() {
 
     for (let i = 0; i < games.gamesList.length; i++) {
         cartona += `
-        <div class="outer-card" id="outerGameCard">
+        <div class="outer-card">
             <div class="inner-card">
                 <div class="main">
                     <figure>
@@ -36,11 +36,10 @@ export function displayGamesData() {
             </div>
         </div>
         `;
-
-        gamesCards.innerHTML = cartona;
     };
+    gamesCards.innerHTML = cartona;
 
-    outerGameCards = [...document.querySelectorAll('#outerGameCard')];
+    outerGameCards = [...document.querySelectorAll('.outer-card')];
 };
 
 
@@ -50,7 +49,6 @@ export function displayGameDetails() {
     main.navbarDiv.classList.add('d-none');
     main.gamesCardsDiv.classList.add('d-none');
     main.gameDetailsDiv.classList.remove('d-none');
-
 
     main.gameDetails.innerHTML = `
     <header>
@@ -83,7 +81,6 @@ export function displayGameDetails() {
     // Close game details.
     const closeBtn = document.querySelector('.close-btn');
     closeBtn.addEventListener("click", function () {
-        console.log("close");
         main.navbarDiv.classList.remove('d-none');
         main.navbarDiv.classList.add('d-flex');
         main.gamesCardsDiv.classList.remove('d-none');

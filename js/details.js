@@ -1,10 +1,10 @@
 "use strict";
-import { gamesList } from "./games.js";
-import * as ui from "./ui.js";
 import * as main from "./main.js";
+import * as ui from "./ui.js";
+import * as games from "./games.js";
 
 
-let gameID;
+let index;
 export let data;
 
 
@@ -12,8 +12,7 @@ export let data;
 export function getGameID() {
     ui.outerGameCards.forEach(game => {
         game.addEventListener("click", function () {
-            gameID = ui.outerGameCards.indexOf(this)
-            console.log(gamesList[gameID].id);
+            index = ui.outerGameCards.indexOf(this)
 
             // Get game details.
             const gameDetails = new Details();
@@ -40,10 +39,9 @@ export class Details {
         };
 
         try {
-            const response = await fetch(`https://free-to-play-games-database.p.rapidapi.com/api/game?id=${gamesList[gameID].id}`, options);
+            const response = await fetch(`https://free-to-play-games-database.p.rapidapi.com/api/game?id=${games.gamesList[index].id}`, options);
             data = await response.json();
 
-            console.log(data);
             // Display game details.
             ui.displayGameDetails();
 
